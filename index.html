@@ -26,17 +26,14 @@
       align-items: center;
       height: 100vh;
       padding: 20px;
-      flex-direction: column;
-      text-align: center;
     }
 
     .flex-container {
       display: flex;
-      flex-direction: column;
+      align-items: flex-start;
       gap: 30px;
-      align-items: center;
-      width: 100%;
       max-width: 900px;
+      width: 100%;
     }
 
     .image-block {
@@ -51,7 +48,6 @@
       height: 200px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 20px;
     }
 
     .social-icons {
@@ -64,6 +60,10 @@
       height: 32px;
       object-fit: contain;
       cursor: pointer;
+    }
+
+    .text-content {
+      flex: 1;
     }
 
     h1 {
@@ -95,12 +95,21 @@
       margin-bottom: 10px;
     }
 
-    .text-content {
-      flex: 1;
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      font-size: 17px;
+      line-height: 1.6;
     }
 
-    /* Mobile-responsive styles */
+    /* Mobile-first styles */
     @media (max-width: 768px) {
+      .flex-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
       h1 {
         font-size: 36px;
       }
@@ -111,11 +120,7 @@
 
       .desc {
         font-size: 16px;
-      }
-
-      .flex-container {
-        gap: 20px;
-        padding: 0 15px;
+        text-align: center;
       }
 
       .profile-img {
@@ -127,11 +132,18 @@
         justify-content: center;
       }
 
-      .container {
-        padding: 10px;
+      section {
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        font-size: 16px;
       }
     }
 
+    /* Mobile styles for smaller screens */
     @media (max-width: 480px) {
       h1 {
         font-size: 28px;
@@ -152,15 +164,16 @@
 
       .flex-container {
         gap: 15px;
-      }
-
-      .image-block {
-        margin-bottom: 10px;
+        padding: 0 15px;
       }
 
       .profile-img {
         width: 120px;
         height: 120px;
+      }
+
+      .social-icons {
+        gap: 10px;
       }
     }
   </style>
@@ -186,17 +199,21 @@
 
         <section>
           <div class="section-title">Currently:</div>
-          <p>Founder @ NexFlow, developing with Emory, diabetes management software</p>
-          <p>Research with David Hu Lab @ Ga Tech</p>
-          <p>Developing a Kalman Filter at SAVA Robotics (Now a YC Company)</p>
-          <p>Research with Denis T Lab @ Ga Tech</p>
+          <ul>
+            <li>Founder @ NexFlow, developing with Emory, diabetes management software</li>
+            <li>Research with David Hu Lab @ Ga Tech</li>
+            <li>Developing a Kalman Filter at SAVA Robotics (Now a YC Company)</li>
+            <li>Research with Denis T Lab @ Ga Tech</li>
+          </ul>
         </section>
 
         <section>
           <div class="section-title">Prev:</div>
-          <p>Research presented at SICB</p>
-          <p>Established Tutoring nonprofit, now partnering with TJHS</p>
-          <p>Developed a Vector Query System at SAVA Robotics (Now a YC Company)</p>
+          <ul>
+            <li>Research presented at SICB</li>
+            <li>Established Tutoring nonprofit, now partnering with TJHS</li>
+            <li>Developed a Vector Query System at SAVA Robotics (Now a YC Company)</li>
+          </ul>
         </section>
       </div>
     </div>
