@@ -10,10 +10,12 @@
       height: 100%;
       margin: 0;
       padding: 0;
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
     }
 
     body {
-      font-family: "Helvetica Neue", sans-serif;
       background-color: #fdfdfd;
       color: #333;
     }
@@ -24,15 +26,17 @@
       align-items: center;
       height: 100vh;
       padding: 20px;
+      flex-direction: column;
+      text-align: center;
     }
 
     .flex-container {
       display: flex;
-      align-items: flex-start;
+      flex-direction: column;
       gap: 30px;
-      max-width: 900px;
+      align-items: center;
       width: 100%;
-      flex-wrap: wrap;
+      max-width: 900px;
     }
 
     .image-block {
@@ -40,9 +44,6 @@
       flex-direction: column;
       align-items: center;
       gap: 15px;
-      width: 100%;
-      max-width: 200px;
-      margin-bottom: 20px;
     }
 
     .profile-img {
@@ -50,6 +51,7 @@
       height: 200px;
       object-fit: cover;
       border-radius: 50%;
+      margin-bottom: 20px;
     }
 
     .social-icons {
@@ -62,11 +64,6 @@
       height: 32px;
       object-fit: contain;
       cursor: pointer;
-    }
-
-    .text-content {
-      flex: 1;
-      width: 100%;
     }
 
     h1 {
@@ -98,11 +95,8 @@
       margin-bottom: 10px;
     }
 
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      font-size: 17px;
-      line-height: 1.6;
+    .text-content {
+      flex: 1;
     }
 
     /* Mobile-responsive styles */
@@ -120,21 +114,17 @@
       }
 
       .flex-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .text-content {
-        text-align: center;
-      }
-
-      .social-icons {
-        justify-content: center;
+        gap: 20px;
+        padding: 0 15px;
       }
 
       .profile-img {
         width: 150px;
         height: 150px;
+      }
+
+      .social-icons {
+        justify-content: center;
       }
 
       .container {
@@ -161,11 +151,16 @@
       }
 
       .flex-container {
-        gap: 20px;
+        gap: 15px;
       }
 
       .image-block {
-        max-width: 150px;
+        margin-bottom: 10px;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
       }
     }
   </style>
@@ -191,21 +186,17 @@
 
         <section>
           <div class="section-title">Currently:</div>
-          <ul>
-            <li>Founder @ NexFlow, developing w Emory, diabetes management software</li>
-            <li>Research w David Hu Lab @ Ga Tech</li>
-            <li>Developing a Kalman Filter at SAVA Robotics (Now a YC Company)</li>
-            <li>Research w Denis T Lab @ Ga Tech</li>
-          </ul>
+          <p>Founder @ NexFlow, developing with Emory, diabetes management software</p>
+          <p>Research with David Hu Lab @ Ga Tech</p>
+          <p>Developing a Kalman Filter at SAVA Robotics (Now a YC Company)</p>
+          <p>Research with Denis T Lab @ Ga Tech</p>
         </section>
 
         <section>
           <div class="section-title">Prev:</div>
-          <ul>
-            <li>Research got presented at SICB</li>
-            <li>Established Tutoring nonprofit, now partnering w TJHS</li>
-            <li>Developed a Vector Query System at SAVA Robotics (Now a YC Company)</li>
-          </ul>
+          <p>Research presented at SICB</p>
+          <p>Established Tutoring nonprofit, now partnering with TJHS</p>
+          <p>Developed a Vector Query System at SAVA Robotics (Now a YC Company)</p>
         </section>
       </div>
     </div>
