@@ -12,7 +12,7 @@
 
     body {
       font-family: "Helvetica Neue", sans-serif;
-      background-color: #f4f4f4;
+      background-color: #fdfdfd;
       color: #333;
     }
 
@@ -30,16 +30,34 @@
       max-width: 900px;
     }
 
-    .text-content {
-      flex: 1;
+    .image-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
     }
 
     .profile-img {
-      display: block;
       width: 200px;
       height: 200px;
       object-fit: cover;
       border-radius: 50%;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+
+    .text-content {
+      flex: 1;
     }
 
     h1 {
@@ -82,11 +100,17 @@
 <body>
   <div class="container">
     <div class="flex-container">
-      <img src="./Arjun.png" alt="Arjun" class="profile-img">
+      <div class="image-block">
+        <img src="./Arjun.png" alt="Arjun" class="profile-img">
+        <div class="social-icons">
+          <img src="./instagram.png" alt="Instagram">
+          <img src="./x.png" alt="X">
+        </div>
+      </div>
       <div class="text-content">
         <h1>Hey, I'm Arjun</h1>
         <p class="subtitle">Hs Junior in ATL, 16 yrs old</p>
-        <p class="desc">I fw startups <br>Science Olympiad 2x State Champion and 2x Nats Competitor (Top 10 @ Nats)</p>
+        <p class="desc">I fw startups and cars<br>Science Olympiad 2x State Champion and 2x Nats Competitor (Top 10 @ Nats)</p>
 
         <section>
           <div class="section-title">Currently:</div>
