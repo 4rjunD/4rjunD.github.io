@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Hey, I'm Arjun</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
       height: 100%;
@@ -22,6 +23,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      padding: 20px;
     }
 
     .flex-container {
@@ -29,6 +31,8 @@
       align-items: flex-start;
       gap: 30px;
       max-width: 900px;
+      width: 100%;
+      flex-wrap: wrap;
     }
 
     .image-block {
@@ -36,6 +40,9 @@
       flex-direction: column;
       align-items: center;
       gap: 15px;
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 20px;
     }
 
     .profile-img {
@@ -59,6 +66,7 @@
 
     .text-content {
       flex: 1;
+      width: 100%;
     }
 
     h1 {
@@ -95,6 +103,70 @@
       padding-left: 20px;
       font-size: 17px;
       line-height: 1.6;
+    }
+
+    /* Mobile-responsive styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .desc {
+        font-size: 16px;
+      }
+
+      .flex-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text-content {
+        text-align: center;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+
+      .profile-img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .container {
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .desc {
+        font-size: 14px;
+      }
+
+      .social-icons img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .flex-container {
+        gap: 20px;
+      }
+
+      .image-block {
+        max-width: 150px;
+      }
     }
   </style>
 </head>
