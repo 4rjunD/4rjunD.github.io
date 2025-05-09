@@ -80,7 +80,7 @@
             <section id="contact">
                 <h2>Contact</h2>
                 <div class="contact-box">
-                    <form id="contactForm">
+                    <form id="contactForm" class="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -94,6 +94,7 @@
                             <textarea id="message" name="message" rows="4" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Send Message</button>
+                        <div id="form-status" class="form-status"></div>
                     </form>
                 </div>
             </section>
@@ -109,6 +110,7 @@
     <div class="purple-blob blob-2"></div>
     <div class="purple-blob blob-3"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
