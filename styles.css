@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #9d4edd;
-    --secondary-color: #6a00f4;
-    --text-color: #e2e2e2;
-    --light-text: #b8b8b8;
-    --background: #121212;
-    --card-background: #1e1e1e;
+    --primary-color: #0a2463;
+    --secondary-color: #3e92cc;
+    --text-color: #ffffff;
+    --light-text: #d8d8d8;
+    --background: #000000;
+    --card-background: #0a0a0a;
     --transition: all 0.3s ease;
-    --blob-color-1: rgba(157, 78, 221, 0.15);
-    --blob-color-2: rgba(106, 0, 244, 0.1);
+    --blob-color-1: rgba(10, 36, 99, 0.15);
+    --blob-color-2: rgba(62, 146, 204, 0.1);
 }
 
 * {
@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background);
@@ -157,11 +157,11 @@ header {
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     font-size: 3rem;
     font-weight: 700;
     margin-top: 1rem;
-    background: linear-gradient(to right, var(--primary-color), #c77dff);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -193,7 +193,7 @@ section {
 }
 
 h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     font-size: 2.2rem;
     margin-bottom: 2rem;
     position: relative;
@@ -229,7 +229,7 @@ h2::after {
 }
 
 h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.4rem;
     margin-bottom: 0.8rem;
     color: var(--primary-color);
@@ -269,7 +269,7 @@ input, textarea {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 6px;
     color: var(--text-color);
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
     transition: var(--transition);
 }
@@ -286,7 +286,7 @@ input:focus, textarea:focus {
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 6px;
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
