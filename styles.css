@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #0a2463;
-    --secondary-color: #3e92cc;
-    --text-color: #ffffff;
-    --light-text: #d8d8d8;
-    --background: #000000;
-    --card-background: #0a0a0a;
+    --primary-color: #0a2463; /* Royal Navy Blue */
+    --secondary-color: #3e92cc; /* Lighter Blue */
+    --text-color: #212529; /* Very Dark Gray - almost black for main text */
+    --light-text: #495057; /* Dark Gray for secondary text */
+    --background: #ffffff; /* White */
+    --card-background: #f8f9fa; /* Very Light Gray for cards */
     --transition: all 0.3s ease;
-    --blob-color-1: rgba(10, 36, 99, 0.15);
-    --blob-color-2: rgba(62, 146, 204, 0.1);
+    --blob-color-1: rgba(10, 36, 99, 0.05); /* Adjusted for light background */
+    --blob-color-2: rgba(62, 146, 204, 0.08); /* Adjusted for light background */
 }
 
 * {
@@ -39,11 +39,11 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(18, 18, 18, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for nav */
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for light theme */
 }
 
 .nav-container {
@@ -71,7 +71,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-color); /* Dark text for nav links */
     font-weight: 500;
     position: relative;
     padding: 0.5rem 0;
@@ -97,8 +97,8 @@ body {
     width: 100%;
 }
 
-/* Purple blobs */
-.purple-blob {
+/* Purple blobs - now blue blobs */
+.purple-blob { /* Consider renaming class if colors are no longer purple, but for now, just style changes */
     position: fixed;
     border-radius: 50%;
     filter: blur(80px);
@@ -124,7 +124,7 @@ body {
 .blob-3 {
     width: 400px;
     height: 400px;
-    background-color: var(--blob-color-1);
+    background-color: var(--blob-color-1); /* Using blob-color-1 for consistency */
     top: 40%;
     right: -200px;
 }
@@ -148,16 +148,16 @@ header {
     object-fit: cover;
     border: 3px solid var(--primary-color);
     transition: var(--transition);
-    box-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+    box-shadow: 0 0 20px rgba(10, 36, 99, 0.2); /* Adjusted shadow color */
 }
 
 .profile-img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(157, 78, 221, 0.5);
+    box-shadow: 0 0 30px rgba(10, 36, 99, 0.3); /* Adjusted shadow color */
 }
 
 h1 {
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; /* Ensure sans-serif */
     font-size: 3rem;
     font-weight: 700;
     margin-top: 1rem;
@@ -177,14 +177,14 @@ h1 {
     width: 28px;
     height: 28px;
     transition: var(--transition);
-    filter: brightness(0) invert(1);
+    filter: none; /* Remove invert filter if icons are already dark or have color */
     opacity: 0.8;
 }
 
 .social-links img:hover {
     transform: translateY(-3px) rotate(5deg);
     opacity: 1;
-    filter: drop-shadow(0 0 5px var(--primary-color));
+    filter: drop-shadow(0 0 5px var(--primary-color)); /* Keep blue drop shadow */
 }
 
 section {
@@ -193,12 +193,12 @@ section {
 }
 
 h2 {
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; /* Ensure sans-serif */
     font-size: 2.2rem;
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
-    color: var(--text-color);
+    color: var(--text-color); /* Main text color */
 }
 
 h2::after {
@@ -219,17 +219,17 @@ h2::after {
     transition: var(--transition);
     cursor: pointer;
     border-left: 3px solid transparent;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Lighter shadow for light theme */
 }
 
 .position:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Lighter shadow for light theme */
     border-left: 3px solid var(--primary-color);
 }
 
 h3 {
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; /* Ensure sans-serif */
     font-size: 1.4rem;
     margin-bottom: 0.8rem;
     color: var(--primary-color);
@@ -246,7 +246,7 @@ p {
     background-color: var(--card-background);
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Lighter shadow */
     max-width: 600px;
     margin: 0 auto;
 }
@@ -258,18 +258,18 @@ p {
 label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--text-color);
+    color: var(--text-color); /* Main text color */
     font-weight: 500;
 }
 
 input, textarea {
     width: 100%;
     padding: 0.8rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #ffffff; /* White background for inputs */
+    border: 1px solid #ced4da; /* Standard light theme border */
     border-radius: 6px;
-    color: var(--text-color);
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-color); /* Dark text in inputs */
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; /* Ensure sans-serif */
     font-size: 1rem;
     transition: var(--transition);
 }
@@ -277,7 +277,7 @@ input, textarea {
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(157, 78, 221, 0.2);
+    box-shadow: 0 0 0 2px rgba(10, 36, 99, 0.2); /* Blue focus shadow */
 }
 
 .submit-btn {
@@ -295,7 +295,7 @@ input:focus, textarea:focus {
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(157, 78, 221, 0.3);
+    box-shadow: 0 5px 15px rgba(10, 36, 99, 0.3); /* Blue shadow */
 }
 
 /* Footer */
@@ -303,7 +303,7 @@ footer {
     text-align: center;
     margin-top: 4rem;
     padding: 2rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #dee2e6; /* Lighter border for light theme */
 }
 
 footer p {
@@ -370,7 +370,7 @@ footer p {
 /* Expanded state for positions */
 .position.expanded {
     padding: 2.5rem;
-    background-color: rgba(30, 30, 30, 0.95);
+    background-color: #e9ecef; /* Slightly darker light gray for expanded */
     border-left: 3px solid var(--primary-color);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
