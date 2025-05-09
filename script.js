@@ -1,62 +1,140 @@
-// Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
+:root {
+    --primary-color: #0070f3;
+    --secondary-color: #f5f5f5;
+    --text-color: #333;
+    --light-text: #666;
+    --background: #fff;
+    --transition: all 0.3s ease;
+}
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-// Close menu when clicking on a nav link
-const navLinks = document.querySelectorAll('.nav-menu a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-    });
-});
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background);
+}
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
 
-// Add fixed header on scroll
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    header.classList.toggle('scrolled', window.scrollY > 50);
-});
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
 
-// Animation on scroll
-window.addEventListener('scroll', () => {
-    const elements = document.querySelectorAll('.feature-card, .stat-card, .testimonial-card');
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    transition: var(--transition);
+}
+
+.social-links img:hover {
+    transform: translateY(-3px);
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.position {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.position:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--light-text);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
     
-    elements.forEach(element => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
-        
-        if (elementPosition < screenPosition) {
-            element.classList.add('animate');
-        }
-    });
-});
-
-// Form submission feedback
-const waitlistForm = document.querySelector('.waitlist-form');
-if (waitlistForm) {
-    waitlistForm.addEventListener('submit', function(e) {
-        // You can add additional validation here if needed
-        console.log('Form submitted');
-        // Note: The actual submission is handled by Formspark
-    });
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+    }
+    
+    .position {
+        padding: 1rem;
+    }
 }
