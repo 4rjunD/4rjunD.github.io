@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS
+    (function() {
+        // Replace "your_user_id" with your actual EmailJS user ID
+        emailjs.init("hEpQkF0JhxPgVw98f");
+    })();
+    
     // Add animation to elements when they come into view
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -92,23 +98,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Contact form submission
+    // Contact form submission with EmailJS
     const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('form-status');
+    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            // Show sending status
+            formStatus.textContent = "Sending...";
+            formStatus.style.color = "var(--primary-color)";
+            formStatus.style.display = "block";
             
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
-            // Here you would typically send the data to a server
-            // For now, we'll just show a success message
-            alert(`Thanks for your message, ${name}! I'll get back to you soon.`);
+            // Prepare template parameters
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_email: "arjundixit3508@gmail.com"
+            };
             
-            // Reset the form
-            contactForm.reset();
+            // Send email using EmailJS
+            emailjs.send('service_vhzyhl9', 'template_ap7m1j8', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    formStatus.textContent = "Message sent successfully!";
+                    formStatus.style.color = "#4CAF50";
+                    contactForm.reset();
+                    
+                    // Clear success message after 5 seconds
+                    setTimeout(() => {
+                        formStatus.style.display = "none";
+                    }, 5000);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    formStatus.textContent = "Failed to send message. Please try again.";
+                    formStatus.style.color = "#F44336";
+                });
         });
     }
 });
@@ -123,7 +155,7 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.top = e.clientY + 'px';
 });
 
-// Add this CSS for the cursor
+// Add this CSS for the cursor and form status
 document.head.insertAdjacentHTML('beforeend', `
 <style>
     .cursor {
@@ -142,6 +174,12 @@ document.head.insertAdjacentHTML('beforeend', `
     button:hover ~ .cursor {
         transform: translate(-50%, -50%) scale(1.5);
         background-color: rgba(157, 78, 221, 0.5);
+    }
+    
+    .form-status {
+        margin-top: 1rem;
+        font-weight: 500;
+        display: none;
     }
     
     .position {
