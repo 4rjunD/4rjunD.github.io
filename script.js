@@ -1,140 +1,82 @@
-:root {
-    --primary-color: #0070f3;
-    --secondary-color: #f5f5f5;
-    --text-color: #333;
-    --light-text: #666;
-    --background: #fff;
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background);
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--primary-color);
-    transition: var(--transition);
-}
-
-.profile-img:hover {
-    transform: scale(1.05);
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
-}
-
-.social-links img {
-    width: 24px;
-    height: 24px;
-    transition: var(--transition);
-}
-
-.social-links img:hover {
-    transform: translateY(-3px);
-}
-
-section {
-    margin-bottom: 3rem;
-}
-
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    display: inline-block;
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--primary-color);
-}
-
-.position {
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-    transition: var(--transition);
-    cursor: pointer;
-}
-
-.position:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
-}
-
-p {
-    color: var(--light-text);
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
+document.addEventListener('DOMContentLoaded', function() {
+    // Add animation to elements when they come into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    
+    // Observe all position elements
+    document.querySelectorAll('.position').forEach(position => {
+        observer.observe(position);
+        
+        // Add click event to expand/collapse details
+        position.addEventListener('click', function() {
+            this.classList.toggle('expanded');
+        });
+    });
+    
+    // Add hover effect to profile image
+    const profileImg = document.querySelector('.profile-img');
+    if (profileImg) {
+        profileImg.addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.05) rotate(5deg)';
+        });
+        
+        profileImg.addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)';
+        });
     }
     
-    h1 {
-        font-size: 2rem;
+    // Add typing effect to the main heading
+    const heading = document.querySelector('h1');
+    if (heading) {
+        const text = heading.textContent;
+        heading.textContent = '';
+        
+        let i = 0;
+        const typeWriter = () => {
+            if (i < text.length) {
+                heading.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        };
+        
+        setTimeout(typeWriter, 500);
     }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    h3 {
-        font-size: 1.1rem;
-    }
-    
+});
+
+// Add some CSS animations
+document.head.insertAdjacentHTML('beforeend', `
+<style>
     .position {
-        padding: 1rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
     }
-}
+    
+    .position.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .position.expanded {
+        padding: 2rem;
+        background-color: #f0f7ff;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .profile {
+        animation: fadeIn 1s ease;
+    }
+</style>
+`);
