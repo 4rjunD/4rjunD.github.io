@@ -386,3 +386,13 @@ footer p {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Form status styling */
+.form-status {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    display: none;
+    text-align: center;
+}
