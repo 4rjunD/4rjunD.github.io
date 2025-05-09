@@ -1,223 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hey, I'm Arjun</title>
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: "Helvetica Neue", sans-serif;
-      background-color: #fdfdfd;
-      color: #333;
-    }
-
-    body {
-      background-color: #fdfdfd;
-      color: #333;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      padding: 20px;
-    }
-
-    /* Default desktop layout */
-    .flex-container {
-      display: flex;
-      align-items: flex-start;
-      gap: 30px;
-      max-width: 900px;
-      width: 100%;
-    }
-
-    .image-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .profile-img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-    }
-
-    .social-icons img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-      cursor: pointer;
-    }
-
-    .text-content {
-      flex: 1;
-    }
-
-    h1 {
-      font-size: 48px;
-      color: #5a7ba5;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      font-weight: bold;
-      font-size: 20px;
-      color: #5a7ba5;
-      margin-top: 0;
-    }
-
-    .desc {
-      font-size: 18px;
-      margin: 10px 0 30px;
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    .section-title {
-      font-style: italic;
-      font-weight: bold;
-      color: #5a7ba5;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    /* Mobile-first styles */
-    @media (max-width: 768px) {
-      .flex-container {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-      }
-
-      h1 {
-        font-size: 36px;
-      }
-
-      .subtitle {
-        font-size: 18px;
-      }
-
-      .desc {
-        font-size: 16px;
-        text-align: center;
-      }
-
-      .profile-img {
-        width: 150px;
-        height: 150px;
-      }
-
-      .social-icons {
-        justify-content: center;
-      }
-
-      section {
-        text-align: center;
-      }
-
-      ul {
-        list-style-type: none;
-        padding-left: 0;
-        font-size: 16px;
-      }
-    }
-
-    /* Mobile styles for smaller screens */
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 28px;
-      }
-
-      .subtitle {
-        font-size: 16px;
-      }
-
-      .desc {
-        font-size: 14px;
-      }
-
-      .social-icons img {
-        width: 24px;
-        height: 24px;
-      }
-
-      .flex-container {
-        gap: 15px;
-        padding: 0 15px;
-      }
-
-      .profile-img {
-        width: 120px;
-        height: 120px;
-      }
-
-      .social-icons {
-        gap: 10px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexflow - Insulin Resistance Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="flex-container">
-      <div class="image-block">
-        <img src="./Arjun.png" alt="Arjun" class="profile-img">
-        <div class="social-icons">
-          <a href="https://www.instagram.com/4rjund/" target="_blank">
-            <img src="./instagram.png" alt="Instagram">
-          </a>
-          <a href="https://x.com/ArjunDixit0" target="_blank">
-            <img src="./x.png" alt="X">
-          </a>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Nexflow</h1>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">How It Works</a></li>
+                <li><a href="#waitlist" class="cta-button-small">Join Waitlist</a></li>
+                <li><a href="#booking" class="cta-button">Book a Meeting</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Predict Insulin Resistance with Nexflow</h1>
+            <p>The most cost-effective and non-invasive method to predict your insulin resistance score</p>
+            <div class="cta-buttons">
+                <a href="#waitlist" class="primary-button">Join Waitlist</a>
+                <a href="#booking" class="secondary-button">Book a Demo</a>
+            </div>
         </div>
-      </div>
-      <div class="text-content">
-        <h1>Hey, I'm Arjun</h1>
-        <p class="subtitle">Hs Junior in ATL, 16 yrs old</p>
-        <p class="desc">I fw startups <br>Science Olympiad 2x State Champion and 2x Nats Competitor (Top 10 @ Nats)</p>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/600x400" alt="Insulin Resistance Prediction">
+        </div>
+    </section>
 
-        <section>
-          <div class="section-title">Currently:</div>
-          <ul>
-            <li>Founder @ NexFlow, developing with Emory, diabetes management software</li>
-            <li>Research with David Hu Lab @ Ga Tech</li>
-            <li>Developing a Kalman Filter at SAVA Robotics (Now a YC Company)</li>
-            <li>Research with Denis T Lab @ Ga Tech</li>
-          </ul>
-        </section>
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Nexflow</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At Nexflow, we're revolutionizing how insulin resistance is detected and managed. Our innovative technology provides a cost-effective and completely non-invasive method to predict insulin resistance scores with remarkable accuracy.</p>
+                    <p>Traditional methods for detecting insulin resistance are often expensive, invasive, and inaccessible to many people. We've developed a breakthrough approach that changes everything, making early detection possible for everyone.</p>
+                    <p>Our mission is to empower individuals with knowledge about their metabolic health, enabling preventative care and lifestyle changes before serious health issues develop.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>95%</h3>
+                        <p>Accuracy Rate</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>5min</h3>
+                        <p>Test Duration</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>0</h3>
+                        <p>Needles Required</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section>
-          <div class="section-title">Prev:</div>
-          <ul>
-            <li>Research presented at SICB</li>
-            <li>Established Tutoring nonprofit, now partnering with TJHS</li>
-            <li>Developed a Vector Query System at SAVA Robotics (Now a YC Company)</li>
-          </ul>
-        </section>
-      </div>
-    </div>
-  </div>
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Non-Invasive Testing</h3>
+                    <p>Our technology requires no blood draws or invasive procedures. Simply use our app and specialized sensor to get your results.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>AI-Powered Analysis</h3>
+                    <p>Our proprietary algorithms analyze multiple data points to generate an accurate insulin resistance score.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-medical-alt"></i>
+                    </div>
+                    <h3>Personalized Reports</h3>
+                    <p>Receive detailed reports with actionable insights about your metabolic health and recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Healthcare Professionals Say</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote">"Nexflow's technology is a game-changer for preventative healthcare. It allows us to identify insulin resistance early and intervene before diabetes develops."</div>
+                    <div class="author">
+                        <img src="https://via.placeholder.com/60" alt="Dr. Sarah Johnson">
+                        <div>
+                            <h4>Dr. Sarah Johnson</h4>
+                            <p>Endocrinologist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"I've been recommending Nexflow to my patients as a first-line screening tool. It's affordable, convenient, and provides valuable insights into metabolic health."</div>
+                    <div class="author">
+                        <img src="https://via.placeholder.com/60" alt="Dr. Michael Chen">
+                        <div>
+                            <h4>Dr. Michael Chen</h4>
+                            <p>Primary Care Physician</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="waitlist" class="waitlist-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Join Our Waitlist</h2>
+                <div class="underline"></div>
+            </div>
+            <p>Be among the first to access our revolutionary insulin resistance prediction technology. Sign up for early access and exclusive updates.</p>
+            <form action="https://submit-form.com/YOUR_FORMSPARK_ID" method="POST" class="waitlist-form">
+                <input type="email" name="email" placeholder="Your email address" required>
+                <input type="text" name="name" placeholder="Your name" required>
+                <select name="user_type" required>
+                    <option value="" disabled selected>I am a...</option>
+                    <option value="patient">Patient</option>
+                    <option value="healthcare_provider">Healthcare Provider</option>
+                    <option value="researcher">Researcher</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you" />
+                <button type="submit" class="primary-button">Join Waitlist</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Book a Meeting</h2>
+                <div class="underline"></div>
+            </div>
+            <p>Interested in learning more about our technology or discussing partnership opportunities? Schedule a meeting with our team.</p>
+            <div class="calendly-container">
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_CALENDLY_LINK" style="min-width:320px;height:630px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Nexflow</h2>
+                    <p>© 2023 Nexflow. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">How It Works</a></li>
+                        <li><a href="#waitlist">Join Waitlist</a></li>
+                        <li><a href="#booking">Book a Meeting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
