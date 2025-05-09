@@ -3,205 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexflow - Insulin Resistance Prediction</title>
+    <title>Arjun Dixit</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Nexflow</h1>
+    <div class="container">
+        <header>
+            <div class="profile">
+                <img src="Arjun.png" alt="Arjun Dixit" class="profile-img">
+                <h1>Arjun Dixit</h1>
+                <div class="social-links">
+                    <a href="https://instagram.com/yourusername" target="_blank">
+                        <img src="instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://x.com/yourusername" target="_blank">
+                        <img src="x.png" alt="X">
+                    </a>
+                </div>
             </div>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">How It Works</a></li>
-                <li><a href="#waitlist" class="cta-button-small">Join Waitlist</a></li>
-                <li><a href="#booking" class="cta-button">Book a Meeting</a></li>
-            </ul>
-        </nav>
-    </header>
+        </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Predict Insulin Resistance with Nexflow</h1>
-            <p>The most cost-effective and non-invasive method to predict your insulin resistance score</p>
-            <div class="cta-buttons">
-                <a href="#waitlist" class="primary-button">Join Waitlist</a>
-                <a href="#booking" class="secondary-button">Book a Demo</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://via.placeholder.com/600x400" alt="Insulin Resistance Prediction">
-        </div>
-    </section>
+        <main>
+            <section id="current">
+                <h2>Current Positions</h2>
+                <div class="position">
+                    <h3>Co-founder @ NexFlow</h3>
+                    <p>Building AI that sees insulin resistance before symptoms do.</p>
+                </div>
+                <div class="position">
+                    <h3>Research @ Emory</h3>
+                    <p>Modeling insulin patterns with AI and math under the Global Diabetes Director.</p>
+                </div>
+                <div class="position">
+                    <h3>Researcher @ David Hu Lab, Georgia Tech</h3>
+                    <p>On-site biological physics research and co-author.</p>
+                </div>
+                <div class="position">
+                    <h3>Research Intern @ Denis T. Lab, Georgia Tech</h3>
+                    <p>10+ months of MATLAB-driven analysis and modeling.</p>
+                </div>
+                <div class="position">
+                    <h3>Engineering intern @ YC-backed SAVA Robotics</h3>
+                    <p>Developed Kalman filters + vector search tools.</p>
+                </div>
+            </section>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Nexflow</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>At Nexflow, we're revolutionizing how insulin resistance is detected and managed. Our innovative transformer model provides a cost-effective and completely non-invasive method to predict insulin resistance scores with remarkable accuracy.</p>
-                    <p>Traditional methods for detecting insulin resistance are often expensive, invasive, and inaccessible to many people. We've developed a breakthrough approach that changes everything, making early detection of type 2 diabetes possible for everyone.</p>
-                    <p>Our mission is to empower individuals with knowledge about their metabolic health, enabling preventative care and lifestyle changes before serious health issues develop.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>95%</h3>
-                        <p>Accuracy Rate</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>5min</h3>
-                        <p>Test Duration</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>0</h3>
-                        <p>Needles Required</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="features-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>How It Works</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Non-Invasive Testing</h3>
-                    <p>Our technology requires no blood draws or invasive procedures. Simply use our app and specialized sensor to get your results.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>AI-Powered Analysis</h3>
-                    <p>Our proprietary transformer model analyzes multiple data points to generate an accurate insulin resistance score for the earliest detection of type 2 diabetes.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-medical-alt"></i>
-                    </div>
-                    <h3>Personalized Reports</h3>
-                    <p>Receive detailed reports with actionable insights about your metabolic health and recommendations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Professionals Say</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="quote">"NexFlow could become a game-changer in early insulin resistance detection once fully developed."</div>
-                    <div class="author">
-                        <img src="https://via.placeholder.com/60" alt="Professor Mohammed Ali">
-                        <div>
-                            <h4>Professor Mohammed Ali, MD</h4>
-                            <p>Co-Director of Global Diabetes at Emory University</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote">"The NexFlow team is solving a real problem with a smart, scalable approach."</div>
-                    <div class="author">
-                        <img src="https://via.placeholder.com/60" alt="Tyler Rose">
-                        <div>
-                            <h4>Tyler Rose</h4>
-                            <p>CEO of Bindwell AI, YC Alum</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="waitlist" class="waitlist-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Join Our Waitlist</h2>
-                <div class="underline"></div>
-            </div>
-            <p>Be among the first to access our revolutionary insulin resistance prediction technology. Sign up for early access and exclusive updates.</p>
-            <form action="https://submit-form.com/K9AikUH27" method="POST" class="waitlist-form" id="waitlistForm">
-                <input type="email" name="email" placeholder="Your email address" required>
-                <input type="text" name="name" placeholder="Your name" required>
-                <select name="user_type" required>
-                    <option value="" disabled selected>I am a...</option>
-                    <option value="patient">Patient</option>
-                    <option value="healthcare_provider">Healthcare Provider</option>
-                    <option value="researcher">Researcher</option>
-                    <option value="other">Other</option>
-                </select>
-                <!-- Remove the redirect URL or set it to your current page -->
-                <input type="hidden" name="_redirect" value="#waitlist" />
-                <button type="submit" class="primary-button">Join Waitlist</button>
-            </form>
-        </div>
-    </section>
-
-    <section id="booking" class="booking-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Book a Meeting</h2>
-                <div class="underline"></div>
-            </div>
-            <p>Interested in learning more about our technology or discussing partnership opportunities? Schedule a meeting with our team.</p>
-            <div class="calendly-container">
-                <!-- Calendly inline widget begin -->
-                <div class="calendly-inline-widget" data-url="https://calendly.com/arjundixit3508/30min" style="min-width:320px;height:630px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                <!-- Calendly inline widget end -->
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>Nexflow</h2>
-                    <p>© 2023 Nexflow. All rights reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#features">How It Works</a></li>
-                        <li><a href="#waitlist">Join Waitlist</a></li>
-                        <li><a href="#booking">Book a Meeting</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h3>Connect With Us</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+            <section id="past">
+                <h2>Past</h2>
+                <!-- You can add your past experiences here -->
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
